@@ -1,0 +1,70 @@
+/* =========================================
+   ULTRA DARK GLASSMORPHISM
+========================================= */
+
+.glass {
+  /* Dark frosted glass */
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.03)
+  );
+
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 18px;
+
+  /* Deep shadow + subtle inner shine */
+  box-shadow:
+    0 18px 55px rgba(0, 0, 0, 0.6),
+    inset 0 1px 1px rgba(255, 255, 255, 0.12);
+
+  animation: fadeInUp 0.5s ease both;
+  transition: all 0.35s ease;
+}
+
+/* =========================================
+   HOVER INTENSITY + NEON ACCENT
+========================================= */
+
+.glass:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.12),
+    rgba(255, 255, 255, 0.05)
+  );
+
+  border-color: rgba(34, 211, 238, 0.45);
+
+  box-shadow:
+    0 22px 70px rgba(0, 0, 0, 0.75),
+    0 0 30px rgba(34, 211, 238, 0.35),
+    inset 0 1px 1px rgba(255, 255, 255, 0.18);
+
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   OPTIONAL: STRONG GLASS FOR IMPORTANT PANELS
+   (Use class="glass glass-strong")
+========================================= */
+
+.glass-strong {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.14),
+    rgba(255, 255, 255, 0.06)
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+/* =========================================
+   OPTIONAL: CLICK FEEDBACK
+========================================= */
+
+.glass:active {
+  transform: scale(0.98);
+}
